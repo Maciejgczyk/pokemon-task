@@ -1,0 +1,5 @@
+<section class="container">
+  <div [routerLink]="['/main', card.id]" *ngFor="let card of pokemonCards$ | async" class="container__card">
+    <img [src]="card?.images?.small" class="container__card--image" alt="Pokemon">
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="container">
+  <form
+    [formGroup]="pokemonForm"
+    *ngIf="this.pokemonForm"
+    (ngSubmit)="savePokemonChanges()"
+    class="container__form"
+  >
+    <span class="container__name">
+      {{ pokemon.name }}
+    </span>
+    <input type="text" placeholder="Name" formControlName="name" class="container__form--input">
+    <input type="text" placeholder="Supertype" formControlName="supertype" class="container__form--input">
+    <input type="text" placeholder="Rarity" formControlName="rarity" class="container__form--input">
+    <button type="submit" class="container__form--button">Save</button>
+  </form>
+
+  <ng-container *ngIf="pokemonForm?.invalid">
+    <div *ngIf="pokemonForm.get('name').errors?.required">
+      <span>Name is required</span>
+    </div>
+    <div *ngIf="pokemonForm.get('supertype').errors?.required">
+      <span>Supertype is required</span>
+    </div>
+    <div *ngIf="pokemonForm.get('rarity').errors?.required">
+      <span>Rarity is required</span>
+    </div>
+  </ng-container>
+
+</section>

@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 100%;
+  max-width: 1232px;
+
+  margin: 0 auto;
+
+  &__card {
+    width: 100px;
+
+    margin: 24px;
+
+    cursor: pointer;
+  }
+
+  &__card--image {
+    width: 140px;
+  }
+}
