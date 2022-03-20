@@ -39,6 +39,7 @@ export class PokemonDetailsComponent implements OnInit {
   savePokemonChanges() {
     if(this.pokemonForm.valid) {
       this.dataService.savePokemonChanges(this.pokemon.id, this.pokemonForm.value);
+      alert('Form sent successfully');
     }
   }
 }

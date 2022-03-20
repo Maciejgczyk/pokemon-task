@@ -15,13 +15,13 @@
   </form>
 
   <ng-container *ngIf="pokemonForm?.invalid">
-    <div *ngIf="pokemonForm.get('name').errors?.required">
+    <div class="container__error" *ngIf="pokemonForm.get('name').errors?.required">
       <span>Name is required</span>
     </div>
-    <div *ngIf="pokemonForm.get('supertype').errors?.required">
+    <div class="container__error" *ngIf="pokemonForm.get('supertype').errors?.required">
       <span>Supertype is required</span>
     </div>
-    <div *ngIf="pokemonForm.get('rarity').errors?.required">
+    <div class="container__error" *ngIf="pokemonForm.get('rarity').errors?.required">
       <span>Rarity is required</span>
     </div>
   </ng-container>
